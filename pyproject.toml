@@ -1,0 +1,23 @@
+[project]
+name = "trading_analysis"
+version = "0.1.0"
+description = "trading-analysis using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "crewai[tools]>=0.108.0,<1.0.0"
+]
+
+[project.scripts]
+trading_analysis = "trading_analysis.main:run"
+run_crew = "trading_analysis.main:run"
+train = "trading_analysis.main:train"
+replay = "trading_analysis.main:replay"
+test = "trading_analysis.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"
