@@ -16,8 +16,8 @@ Current Development:
 - ✓ Multi-agent infrastructure
 - ✓ Market data integration
 - ✓ Research and analysis pipeline
-- 🔨 Portfolio management (In active development)
-- 📅 Trading execution (Planned)
+- 🚧 Portfolio management (In active development)
+- 🔜 Trading execution (Planned)
 
 ## Tech Stack
 
