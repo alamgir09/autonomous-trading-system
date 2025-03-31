@@ -4,7 +4,6 @@ import json
 from websockets import connect
 from trading_analysis.main import run
 from alpaca.trading.client import TradingClient
-# from alpaca.trading.client import TradingClient
 
 class NewsMonitorService:
     def __init__(self):
