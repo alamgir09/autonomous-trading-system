@@ -10,6 +10,15 @@ This research project uses CrewAI to orchestrate multiple AI agents that work to
 - Generate trading strategies and validate them
 - Provide portfolio analysis and recommendations
 
+## Project Status
+
+Current Development:
+- ✓ Multi-agent infrastructure
+- ✓ Market data integration
+- ✓ Research and analysis pipeline
+- 🔨 Portfolio management (In active development)
+- 📅 Trading execution (Planned)
+
 ## Tech Stack
 
 - **Core**: Python, CrewAI

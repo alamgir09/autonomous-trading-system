@@ -3,6 +3,7 @@ import os
 import json
 from websockets import connect
 from trading_analysis.main import run
+from alpaca.trading.client import TradingClient
 # from alpaca.trading.client import TradingClient
 
 class NewsMonitorService:
@@ -11,6 +12,7 @@ class NewsMonitorService:
         self.api_key = os.getenv("APCA_API_KEY_ID")
         self.secret_key = os.getenv("APCA_API_SECRET_KEY")
         self.base_url = os.getenv("APCA_API_BASE_URL")
+        self.client = TradingClient(self.api_key, self.secret_key)
 
     async def connect(self):
         async with connect(self.ws_url) as websocket:
@@ -18,7 +20,8 @@ class NewsMonitorService:
             auth_message = json.dumps({
                 "action": "auth",
                 "key": self.api_key,
-                "secret": self.secret_key
+                "secret": self.secret_key,
+                "domain": self.base_url
             })
             await websocket.send(auth_message)
 
@@ -35,6 +38,7 @@ class NewsMonitorService:
                     news_data = json.loads(message)
                     news_data = news_data[0]
                     print(news_data)
+
                     if "headline" in news_data:
                         inputs = {
                             'ticker': news_data['symbols'],
@@ -44,6 +48,7 @@ class NewsMonitorService:
                         print("inputs", inputs)
                         run(inputs)
                         print("run complete")
+                        break
                 except Exception as e:
                     print(f"Error: {e}")
                     break

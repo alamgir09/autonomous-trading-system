@@ -43,6 +43,7 @@ strategy_validation_task:
     - Analyzing historical performance
     - Checking current market conditions
     - Evaluating risk metrics
+    - Checking portfolio holdings
     Request additional research if market conditions are unclear
     or historical data shows anomalies.
   expected_output: >
@@ -51,7 +52,8 @@ strategy_validation_task:
     2. Key risk factors identified
     3. Recommended adjustments
     4. Research requests made and findings
-    5. Execution tool and strategy that will be executed
+    5. Portfolio holdings
+    6. Execution tool and strategy that will be executed
   agent: financial_analyst
   # collaboration_required: ["researcher", "news_monitor"]
   collaboration_required: ["researcher"]
