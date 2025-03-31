@@ -16,7 +16,7 @@ Current Development:
 - ✓ Multi-agent infrastructure
 - ✓ Market data integration
 - ✓ Research and analysis pipeline
-- 🚧 Portfolio management (In active development)
+- ✓ Portfolio management (View and analyze current holdings from Alpaca)
 - 🔜 Trading execution (Planned)
 
 ## Tech Stack
