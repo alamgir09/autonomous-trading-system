@@ -39,7 +39,7 @@ market_data_analysis_task:
 
 strategy_validation_task:
   description: >
-    Review and validate trading strategy for {ticker} by:
+    Review and validate trading strategy for {ticker} by creating a detailed report with the following sections:
     - Analyzing historical performance
     - Checking current market conditions
     - Evaluating risk metrics

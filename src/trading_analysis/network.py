@@ -20,7 +20,6 @@ class NewsMonitorService:
                 "action": "auth",
                 "key": self.api_key,
                 "secret": self.secret_key,
-                "domain": self.base_url
             })
             await websocket.send(auth_message)
 
@@ -47,10 +46,11 @@ class NewsMonitorService:
                         print("inputs", inputs)
                         run(inputs)
                         print("run complete")
-                        break
                 except Exception as e:
                     print(f"Error: {e}")
                     break
+                finally:
+                    await asyncio.sleep(1)
             
 
 if __name__ == "__main__":

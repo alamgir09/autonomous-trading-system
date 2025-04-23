@@ -23,6 +23,7 @@ class TradingAnalysis():
 
     # If you would like to add tools to your agents, you can learn more about it here:
     # https://docs.crewai.com/concepts/agents#agent-tools
+
     @agent
     def researcher(self) -> Agent:
         return Agent(
@@ -78,7 +79,7 @@ class TradingAnalysis():
     def reporting_task(self) -> Task:
         return Task(
             config=self.tasks_config['reporting_task'],
-            output_file='report.md'
+            output_file='data/report.md'
         )
     
     @task
@@ -91,14 +92,14 @@ class TradingAnalysis():
     def strategy_validation_task(self) -> Task:
         return Task(
             config=self.tasks_config['strategy_validation_task'],
-            output_file='strategy_validation_report.md',
+            output_file='data/strategy_validation_report.md',
         )
     
     @task
     def deep_research_task(self) -> Task:
         return Task(
             config=self.tasks_config['deep_research_task'],
-            output_file='deep_research_report.md',
+            output_file='data/deep_research_report.md',
         )
 
     @crew
